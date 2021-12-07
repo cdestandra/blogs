@@ -1,0 +1,25 @@
+<script>
+/**
+ * Direction:
+ * Remove duplicated data from array
+ * 
+ * Expected Result:
+ * [1, 2, 3, 4, 5]
+ */
+const data = [1, 4, 2, 3, 5, 3, 2, 4];
+
+function result(data) {
+  // Your Code Here
+    var seen = {};
+    var ret_arr = [];
+    for (var i = 0; i < data.length; i++) {
+        if (!(data[i] in seen)) {
+            ret_arr.Push(data[i]);
+            seen[data[i]] = true;
+        }
+    }
+    return ret_arr;
+}
+
+console.log(result(data));
+</script>
